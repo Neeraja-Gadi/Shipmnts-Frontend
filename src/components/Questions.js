@@ -8,6 +8,7 @@ import Typography from '@mui/material/Typography';
 import { FiEdit2 } from 'react-icons/fi'
 import { useNavigate } from 'react-router-dom'
 import NavBar from "./NavBar"
+import { flexbox } from '@mui/system';
 
 
 
@@ -95,14 +96,20 @@ const AllQuestionCards = () => {
                   {
                     question.user._id == userId ?
                       <button onClick={() => { }} style={{ float: 'right', border: 'none', background: 'transparent', cursor: 'pointer' }}>
-                        <FiEdit2 onClick={() => { navigate(`/EditAQuestion/${question._id}`) }} style={{ float: 'right', fontSize: '20px' }} />
+                        <FiEdit2 onClick={() => { navigate(`/EditAQuestion/${question._id}`) }} style={{  float: 'right',fontSize: '18px' }} />
                       </button> : ""
                   }
                   {question.title && (
                     <Grid item xs={10} md={6} >
-                      <strong>title:</strong> {question.title}
+                        <Typography variant='h2' fontWeight="bold" fontSize="20px" style={{ margin: '20px 0px 0px 00px' }}>
+                      Title
+                        </Typography>
+                      <br></br>
+                      {question.title}
                     </Grid>
                   )}
+                      <br></br>
+
                   {question.tags.length > 0 && (
                     <Grid item xs={10} md={6}>
                       {question.tags.map((tag, index) => (
@@ -112,6 +119,11 @@ const AllQuestionCards = () => {
                       ))}
                     </Grid>
                   )}
+                      <Typography variant='h2'  fontSize="20px" style={{ margin: '20px 0px 0px 00px' }}>
+                      Body:
+                        </Typography>
+                        <br></br>
+
                   {question.body && (
                     <Grid item xs={10} md={6}>
                       {question.body}
@@ -120,7 +132,7 @@ const AllQuestionCards = () => {
 
                   <Button
                     onClick={() => { navigate(`/DetailedQuestion/${question._id}`) }}
-                    style={{ margin: '20px 0px 0px 20px', backgroundColor: "#FFA500", color: "white", borderRadius: '10px'}}>
+                    style={{ margin: '10px 0px 0px 10px', backgroundColor: "#FFA500", color: "black", borderRadius: '5px'}}>
                     View
                   </Button>
 
