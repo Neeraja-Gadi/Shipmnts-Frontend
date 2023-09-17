@@ -16,6 +16,7 @@ import { useNavigate } from 'react-router-dom'
 const defaultTheme = createTheme();
 
 export default function SignIn() {
+  const navigate = useNavigate();
 
   const [userName, setUserName] = React.useState("");
   const [password, setPassword] = React.useState("");
@@ -23,7 +24,6 @@ export default function SignIn() {
 
   
   function LoginHandler() {
-    const navigate = useNavigate();
 
 
     const data = { userName, password }
@@ -44,7 +44,7 @@ console.log(responseData.status)
           localStorage.setItem("token", responseData.token)
           localStorage.setItem("user", JSON.stringify(responseData.data))
           setTimeout(() => {
-             navigate("/AllQuestion")
+             navigate("/")
 
           }, 500);
 
