@@ -32,11 +32,11 @@ function EditAQuestion() {
     useEffect(() => {
         token = localStorage.getItem("token")
         if (!token) {
-            alert("Youare not Logged In . Please Login")
+            alert("You are not Logged In . Please Login")
             navigate('/login')}
     },[]
     )
-    
+
 
     useEffect(() => {
         fetch(`http://localhost:8000/api/qa/questions?questionId=${questionid}`, {
