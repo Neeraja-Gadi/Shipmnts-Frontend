@@ -23,6 +23,8 @@ export default function SignIn() {
 
   
   function LoginHandler() {
+    const navigate = useNavigate();
+
 
     const data = { userName, password }
     fetch(`http://localhost:8000/api/users/login`, {
