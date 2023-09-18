@@ -79,8 +79,6 @@ function PostAQuestion() {
                     <Grid item xs={12} md={8} style={{ marginBottom: '20px' }} >
                         <Card elevation={3} sx={{ marginBottom: '20px', backgroundColor: "#def0f5c9", boxShadow: '4px 4px 8px rgba(0, 0, 0, 0.2)', borderRadius: "10px" }}>
                             <CardContent>
-                                <Typography variant="h6" sx={{ marginLeft: '20px' }}>Making analytics simple and actionable</Typography>
-
                                 <Grid container spacing={0.5}>
                                     <Grid item xs={12} md={10}>
                                         <Typography variant="h6" fontWeight="bold" sx={{ marginLeft: '20px' }}>Summary</Typography>
