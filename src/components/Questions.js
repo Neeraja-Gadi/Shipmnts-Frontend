@@ -102,10 +102,10 @@ const AllQuestionCards = () => {
                   {question.title && (
                     <Grid item xs={10} md={6} >
                         <Typography variant='h2' fontWeight="bold" fontSize="20px" style={{ margin: '20px 0px 0px 00px' }}>
-                      Title
+                        {question.title}
                         </Typography>
                       <br></br>
-                      {question.title}
+                      
                     </Grid>
                   )}
                       <br></br>

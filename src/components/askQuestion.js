@@ -18,8 +18,6 @@ const tagStyle = {
     textDecoration: 'none',
 };
 
-
-
 function PostAQuestion() {
     let token = localStorage.getItem("token");
     const [questionTitle, setQuestionTitle] = useState('');
